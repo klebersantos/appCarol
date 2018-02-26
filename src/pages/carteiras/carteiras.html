@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Carteiras</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+      <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
+ 
+
+      <div class="flex">
+          <ion-item ion-item *ngFor="let item of items " (click)="abrirCarteiraDetalhes(item);">
+
+              <ion-card>
+                  <img src="{{item.imagem.guid}}"/>
+                  <ion-card-content>
+                    <ion-card-title>
+                      {{ item.ttulo }}
+                      </ion-card-title>
+                    <p>
+                        {{ item.cdigo }}
+                    </p>
+                  </ion-card-content>
+                </ion-card>
+
+          </ion-item>
+  </div>
+
+
+  
+</ion-content>

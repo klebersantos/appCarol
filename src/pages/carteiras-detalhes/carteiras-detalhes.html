@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ carteira.ttulo }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <img src="{{carteira.imagem.guid}}"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ carteira.ttulo }}
+            </ion-card-title>
+          <p>
+              {{ carteira.cdigo }}
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>

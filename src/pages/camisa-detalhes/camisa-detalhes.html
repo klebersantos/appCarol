@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ camisa.titulo }}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+      <ion-card>
+          <img src="{{camisa.imagem.guid}}"/>
+          <ion-card-content>
+            <ion-card-title>
+              {{ camisa.titulo }}
+              </ion-card-title>
+            <p>
+                {{ camisa.cdigo }}
+            </p>
+            <p>
+              {{ camisa.cor }}
+            </p>
+            <p>
+              {{ camisa.tamanho }}
+            </p>
+            <h2>
+              {{ camisa.valor }}
+            </h2>
+           
+
+          </ion-card-content>
+        </ion-card>
+        <a id="whatsapp_topo" href="https://api.whatsapp.com/send?phone=5585987774067" target="_blank" data-elementor-open-lightbox="default">
+          <img src="assets/imgs/what.png" class="attachment-full size-full" alt="">			
+        </a>
+  
+  </ion-content>
+  
