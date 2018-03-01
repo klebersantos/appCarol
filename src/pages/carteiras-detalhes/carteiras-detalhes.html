@@ -7,17 +7,27 @@
 </ion-header>
 
 
-<ion-content>
-    <ion-card>
-        <img src="{{carteira.imagem.guid}}"/>
-        <ion-card-content>
-          <ion-card-title>
-            {{ carteira.ttulo }}
-            </ion-card-title>
-          <p>
-              {{ carteira.cdigo }}
-          </p>
-        </ion-card-content>
-      </ion-card>
+<ion-content text-center>
+
+  <img src="{{carteira.imagem.guid}}"/>
+  <br><br>
+
+  <div [innerHtml]="carteira.content.rendered"></div> 
+  <p>
+    {{ carteira.cdigo }}
+  </p>
+  <p>
+    {{ carteira.cor }}
+
+  </p>
+
+  <h2 class="cor">
+    {{ carteira.valor }}
+  </h2>
+
+
+  <a id="whatsapp_topo" ion-button round href="https://api.whatsapp.com/send?phone=5585987774067" target="_blank" data-elementor-open-lightbox="default">
+    Fale pelo WhatsApp
+  </a>
 
 </ion-content>

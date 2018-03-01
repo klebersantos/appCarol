@@ -17,24 +17,29 @@
       <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
  
 
-      <div class="flex">
-          <ion-item ion-item *ngFor="let item of items " (click)="abrirCarteiraDetalhes(item);">
+  
 
-              <ion-card>
-                  <img src="{{item.imagem.guid}}"/>
-                  <ion-card-content>
-                    <ion-card-title>
-                      {{ item.ttulo }}
-                      </ion-card-title>
-                    <p>
-                        {{ item.cdigo }}
-                    </p>
-                  </ion-card-content>
-                </ion-card>
+  <ion-list [virtualScroll]="items" approxItemHeight="430px">
 
-          </ion-item>
-  </div>
-
+      <ion-item no-lines *virtualItem="let item">
+  
+        <ion-card (click)="abrirCarteiraDetalhes(item);">
+          <img [src]="item.imagem.guid" />
+          <ion-card-content>
+            <ion-card-title>
+              {{ item.ttulo }}
+            </ion-card-title>
+            <p>
+              {{ item.cdigo }}
+            </p>
+            <ion-badge item-right>{{ item.valor }} </ion-badge>
+          </ion-card-content>
+        </ion-card>
+  
+  
+      </ion-item>
+  
+    </ion-list>
 
   
 </ion-content>

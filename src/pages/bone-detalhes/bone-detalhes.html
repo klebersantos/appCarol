@@ -1,24 +1,36 @@
 <ion-header>
 
     <ion-navbar>
-      <ion-title>{{ bone.ttulo }}</ion-title>
+      <ion-title>{{ bone.titulo }}</ion-title>
     </ion-navbar>
   
   </ion-header>
   
   
-  <ion-content>
-      <ion-card>
-          <img src="{{bone.imagem.guid}}"/>
-          <ion-card-content>
-            <ion-card-title>
-              {{ bone.ttulo }}
-              </ion-card-title>
-            <p>
-                {{ bone.cdigo }}
-            </p>
-          </ion-card-content>
-        </ion-card>
-  
-  </ion-content>
-  
+
+<ion-content text-center>
+
+  <img src="{{bone.imagem.guid}}"/>
+  <br><br>
+
+  <div [innerHtml]="bone.content.rendered"></div> 
+  <p>
+    {{ bone.cdigo }}
+  </p>
+  <p>
+    {{ bone.cor }}
+
+  </p>
+  <p>
+    {{ bone.tamanho }}
+  </p>
+  <h2 class="cor">
+    {{ bone.valor }}
+  </h2>
+
+
+  <a id="whatsapp_topo" ion-button round href="https://api.whatsapp.com/send?phone=5585987774067" target="_blank" data-elementor-open-lightbox="default">
+    Fale pelo WhatsApp
+  </a>
+
+</ion-content>

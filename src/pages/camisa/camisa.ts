@@ -45,6 +45,9 @@ export class CamisaPage {
     });
   }
 
+  
+  
+
   initializeItems() {
       
     this.items = this.camisa;

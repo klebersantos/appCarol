@@ -1,40 +1,40 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Camisas</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  
-  <ion-content>
-  
-      <ion-refresher (ionRefresh)="doRefresh($event)">
-          <ion-refresher-content></ion-refresher-content>
-        </ion-refresher>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Camisas</ion-title>
+  </ion-navbar>
+</ion-header>
 
-        <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
-  
-        <div class="flex">
-  
-          <ion-item ion-item *ngFor="let item of items" (click)="abrirCamisaDetalhes(item);">
 
-              <ion-card>
-                  <img src="{{item.imagem.guid}}"/>
-                  <ion-card-content>
-                    <ion-card-title>
-                      {{ item.titulo }}
-                      </ion-card-title>
-                    <p>
-                        {{ item.cdigo }}
-                    </p>
-                  </ion-card-content>
-                </ion-card>
+<ion-content>
 
-          </ion-item>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-        </div>
+  <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
+
+  <ion-list [virtualScroll]="items" approxItemHeight="40px">
+
+    <ion-item *virtualItem="let item" (click)="abrirCamisaDetalhes(item);">
+
         
-  </ion-content>
-  
+        <ion-thumbnail item-start>
+          <img [src]="item.imagem.guid" />
+        </ion-thumbnail>
+        
+            <h2>{{ item.titulo }}</h2>
+          <p>
+            {{ item.cdigo }}
+          </p>
+          <ion-badge item-bottom>{{ item.valor }} </ion-badge>
+
+    </ion-item>
+
+  </ion-list>
+
+ 
+
+</ion-content>

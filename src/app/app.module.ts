@@ -23,6 +23,10 @@ import { CamisaProvider } from '../providers/camisa/camisa';
 import { CamisaPage } from '../pages/camisa/camisa';
 import { CamisaDetalhesPageModule } from '../pages/camisa-detalhes/camisa-detalhes.module';
 import { CategoriasPageModule } from '../pages/categorias/categorias.module';
+import { SobrePage } from '../pages/sobre/sobre';
+import { PromocaoProvider } from '../providers/promocao/promocao';
+
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { CategoriasPageModule } from '../pages/categorias/categorias.module';
     CamisaPage,
     CarteirasPage,
     ProdutosDetalhesPage,
+    SobrePage,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +61,7 @@ import { CategoriasPageModule } from '../pages/categorias/categorias.module';
     CarteirasPage,
     CamisaPage,
     ProdutosDetalhesPage,
+    SobrePage,
   ],
   providers: [
     StatusBar,
@@ -64,6 +70,7 @@ import { CategoriasPageModule } from '../pages/categorias/categorias.module';
     CarteirasProvider,
     BoneProvider,
     CamisaProvider,
+    PromocaoProvider,
   ]
 })
 export class AppModule {}

@@ -17,7 +17,7 @@
 
 
 .toolbar-background {
-    background: #FC354C;
+    background: #ff8b00;
 }
 
 .bar-button,
@@ -41,4 +41,79 @@
             }
         }
     }
+}
+
+.badge {
+    background: #ff8b00;
+}
+h2.cor {
+  color:  #ff8b00;
+}
+
+p {
+    color: #8e8e8e;
+    font-size: 16px;
+}
+
+.ligue,
+a#whatsapp_topo {
+    height: 50px;
+    margin-bottom: 50px;
+    background-color: #ff8b00;
+}
+
+.ligue {
+    margin: 20px 0 20px 0;
+    height: 35px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    margin: 0 0 10px;
+    img {
+        border-radius: 8px; 
+    }
+}
+
+.card {
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.item {
+    background-color: #F7F7F7;
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.scroll-content,
+ion-content.has-refresher > .scroll-content {
+    background-color: #F7F7F7;
+}
+
+.card-title {
+    font-size: 1.6rem;
+}
+
+.tabs-md .tab-button-icon {
+    color: #939393; 
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #f7931e;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+    color: #f7931e;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f7931e;
+    opacity: 1;
 }

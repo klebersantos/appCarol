@@ -3,11 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-//import { HomePage } from '../pages/home/home';
-//import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { ContatoPage } from '../pages/contato/contato';
 import { CategoriasPage } from '../pages/categorias/categorias';
+import { SobrePage } from '../pages/sobre/sobre';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,20 +15,27 @@ import { CategoriasPage } from '../pages/categorias/categorias';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  //rootPage: any = CategoriasPage;
-  rootPage:any = HomePage;
+  //rootPage: any = CamisaPage;
+  rootPage:any = TabsPage;
 
-  pages: Array<{title: string, component: any, icon: string}>;
+  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Promoções', component: HomePage, icon: "home"},
-      { title: 'Categorias', component: CategoriasPage, icon: "home" },
-      { title: 'Contato', component: ContatoPage, icon: "home" },
+      { title: 'Promoções', component: HomePage},
+      { title: 'Categorias', component: CategoriasPage},
+      { title: 'Sobre', component: SobrePage},
+      { title: 'Contato', component: ContatoPage},
     ];
+
+    // let status bar overlay webview
+    this.statusBar.overlaysWebView(false);
+
+    // set status bar to white
+    this.statusBar.backgroundColorByHexString('#bb6600');
 
   }
 
