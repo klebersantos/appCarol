@@ -25,6 +25,7 @@ import { CamisaDetalhesPageModule } from '../pages/camisa-detalhes/camisa-detalh
 import { CategoriasPageModule } from '../pages/categorias/categorias.module';
 import { SobrePage } from '../pages/sobre/sobre';
 import { PromocaoProvider } from '../providers/promocao/promocao';
+import { SobreProvider } from '../providers/sobre/sobre';
 
 
 
@@ -71,6 +72,7 @@ import { PromocaoProvider } from '../providers/promocao/promocao';
     BoneProvider,
     CamisaProvider,
     PromocaoProvider,
+    SobreProvider,
   ]
 })
 export class AppModule {}

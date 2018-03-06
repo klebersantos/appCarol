@@ -17,7 +17,7 @@
 
 
 .toolbar-background {
-    background: #ff8b00;
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
 }
 
 .bar-button,
@@ -59,7 +59,7 @@ p {
 a#whatsapp_topo {
     height: 50px;
     margin-bottom: 50px;
-    background-color: #ff8b00;
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
 }
 
 .ligue {
@@ -117,3 +117,7 @@ ion-content.has-refresher > .scroll-content {
     background: #f7931e;
     opacity: 1;
 }
+
+.scroll-content {
+    padding: 0 !important;
+  }
