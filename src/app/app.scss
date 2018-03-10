@@ -20,16 +20,23 @@
     background: linear-gradient(to right, #fc4a1a, #f7b733);
 }
 
-.toolbar  {
-    min-height: 45px;
-}
-
 .bar-button,
 .bar-buttons,
 .toolbar-title {
     color: #fff;
 }
 
+
+
+.foto {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-right: 1rem;
+}
+
+.toolbar-content {
+    display: flex
+}
 .flex {
     display: flex;
     justify-content: space-around;
@@ -100,9 +107,6 @@ a#whatsapp_topo {
     }
 }
 
-.scroll-content {
-    padding-top: 10px !important; 
-}
 
 .scroll-content,
 ion-content.has-refresher > .scroll-content {

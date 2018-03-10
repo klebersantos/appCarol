@@ -26,7 +26,7 @@ import { CategoriasPageModule } from '../pages/categorias/categorias.module';
 import { SobrePage } from '../pages/sobre/sobre';
 import { PromocaoProvider } from '../providers/promocao/promocao';
 import { SobreProvider } from '../providers/sobre/sobre';
-
+import { Screenshot } from '@ionic-native/screenshot';
 
 
 @NgModule({
@@ -73,6 +73,7 @@ import { SobreProvider } from '../providers/sobre/sobre';
     CamisaProvider,
     PromocaoProvider,
     SobreProvider,
+    Screenshot,
   ]
 })
 export class AppModule {}

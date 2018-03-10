@@ -1,7 +1,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ camisa.titulo }}</ion-title>
+    <ion-title>
+      
+      {{ camisa.titulo }} 
+     
+    </ion-title>
+    <div [class.newBG]="state">
+      <ion-icon name="camera" class="foto" (click)="screenShot()"></ion-icon>
+    </div>
   </ion-navbar>
 
 </ion-header>
@@ -15,6 +22,7 @@
   <p>
     {{ camisa.cdigo }}
   </p>
+  
   <p>
     {{ camisa.cor }}
 

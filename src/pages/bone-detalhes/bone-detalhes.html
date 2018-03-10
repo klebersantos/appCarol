@@ -2,6 +2,9 @@
 
     <ion-navbar>
       <ion-title>{{ bone.titulo }}</ion-title>
+      <div [class.newBG]="state">
+          <ion-icon name="camera" class="foto" (click)="screenShot()"></ion-icon>
+        </div>
     </ion-navbar>
   
   </ion-header>
