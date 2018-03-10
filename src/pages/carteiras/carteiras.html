@@ -3,9 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Carteiras</ion-title>
+    <ion-title>
+      <ion-searchbar placeholder="Pesquisar carteiras..." [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </ion-title>
   </ion-navbar>
+
 </ion-header>
+
 
 
 <ion-content>
@@ -14,10 +19,6 @@
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
 
-      <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
- 
-
-  
 
   <ion-list [virtualScroll]="items" approxItemHeight="430px">
 
@@ -29,9 +30,7 @@
             <ion-card-title>
               {{ item.ttulo }}
             </ion-card-title>
-            <p>
-              {{ item.cdigo }}
-            </p>
+            
             <ion-badge item-right>{{ item.valor }} </ion-badge>
           </ion-card-content>
         </ion-card>

@@ -3,8 +3,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Camisas</ion-title>
+    <ion-title>
+      <ion-searchbar placeholder="Pesquisar camisas..." [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </ion-title>
   </ion-navbar>
+
 </ion-header>
 
 
@@ -14,27 +18,26 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Pesquisar..."></ion-searchbar>
 
   <ion-list [virtualScroll]="items" approxItemHeight="40px">
 
     <ion-item *virtualItem="let item" (click)="abrirCamisaDetalhes(item);">
 
-        
-        <ion-thumbnail item-start>
-          <img [src]="item.imagem.guid" />
-        </ion-thumbnail>
-        
-            <h2>{{ item.titulo }}</h2>
-          <p>
-            {{ item.cdigo }}
-          </p>
-          <ion-badge item-bottom>{{ item.valor }} </ion-badge>
+
+      <ion-thumbnail item-start>
+        <img [src]="item.imagem.guid" />
+      </ion-thumbnail>
+
+      <h2>{{ item.titulo }}</h2>
+      
+      <ion-badge item-bottom>{{ item.valor }} </ion-badge>
+
+      <ion-badge item-right> + </ion-badge>
 
     </ion-item>
 
   </ion-list>
 
- 
+
 
 </ion-content>
